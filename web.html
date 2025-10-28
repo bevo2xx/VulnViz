@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VunViz Project Overview</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+        line-height: 1.6;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+    h1, h2, h3 {
+        color: #2c3e50;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    h2 {
+        margin-top: 40px;
+    }
+    .section {
+        background: white;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    ul {
+        margin-left: 20px;
+    }
+    code {
+        background: #eee;
+        padding: 2px 4px;
+        border-radius: 3px;
+        font-family: monospace;
+    }
+    .diagram {
+        text-align: center;
+        margin: 20px 0;
+        font-weight: bold;
+        color: #555;
+    }
+</style>
+</head>
+<body>
+
+<h1>VunViz — Web Vulnerability Scanner (Prototype)</h1>
+
+<div class="section">
+    <h2>Project Overview</h2>
+    <p>
+        <strong>VunViz</strong> is a student prototype project designed to automatically scan websites
+        for vulnerabilities, link findings to known CVEs, and generate clear reports including
+        proof-of-concept scripts and manual testing guidance. The project is intended for learning
+        and demonstration purposes.
+    </p>
+</div>
+
+<div class="section">
+    <h2>Goals</h2>
+    <ul>
+        <li>Provide a web interface to configure and run vulnerability scans.</li>
+        <li>Automate basic scanning using open-source tools (e.g., Nmap, ZAP, Nikto, SQLMap).</li>
+        <li>Map discovered vulnerabilities to CVEs and provide severity scoring.</li>
+        <li>Generate PDF/HTML reports including POC scripts and manual testing guidance.</li>
+        <li>Offer a student-friendly learning mode with explanations for each vulnerability.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Key Features</h2>
+    <ul>
+        <li>Web UI for scan configuration and result dashboard.</li>
+        <li>Automatic CVE mapping and severity scoring.</li>
+        <li>Auto-generated proof-of-concept (POC) scripts.</li>
+        <li>Manual test guidance for safe testing.</li>
+        <li>Report generation in PDF and HTML formats.</li>
+        <li>Learning mode explanations for students.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Architecture</h2>
+    <div class="diagram">
+        Web UI &lt;---&gt; Backend API &lt;---&gt; Scan Engines &lt;---&gt; CVE Enrichment &lt;---&gt; Reports
+    </div>
+    <p>
+        <strong>Web UI:</strong> Configure scans, view dashboard, download reports.<br>
+        <strong>Backend API:</strong> Orchestrates scans, parses results, enriches findings.<br>
+        <strong>Scan Engines:</strong> Nmap, ZAP, Nikto, SQLMap (open-source tools).<br>
+        <strong>CVE Enrichment:</strong> Map findings to known vulnerabilities with version checks.<br>
+        <strong>Reports:</strong> Generate downloadable PDF/HTML with POCs and guidance.
+    </p>
+</div>
+
+<div class="section">
+    <h2>How the Prototype Works</h2>
+    <ol>
+        <li>User configures target URL and scan type in the web interface.</li>
+        <li>Backend runs selected scan engines.</li>
+        <li>Findings are parsed and normalized.</li>
+        <li>Findings are enriched with CVEs, severity scoring, POC scripts, and learning guidance.</li>
+        <li>Results are displayed on the dashboard and can be exported as PDF or HTML reports.</li>
+    </ol>
+</div>
+
+<div class="section">
+    <h2>Timeline & Costs (Student Prototype)</h2>
+    <ul>
+        <li>Development time: ~120 hours (4-6 weeks).</li>
+        <li>Internet/data: ~500 EGP (medium usage for downloads & scans).</li>
+        <li>Hosting / cloud VM: ~1,000 EGP (optional, prototype can run locally).</li>
+        <li>Miscellaneous (domain, backups, small utilities): ~500 EGP.</li>
+        <li><strong>Total estimated cost:</strong> ~8,500 EGP (including student effort).</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Student-Friendly Notes</h2>
+    <ul>
+        <li>The prototype only runs safe, authorized scans.</li>
+        <li>All data is stored locally; sensitive info is not shared.</li>
+        <li>Learning mode provides explanations for understanding vulnerabilities.</li>
+        <li>Reports include visual summaries and risk guidance.</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>Conclusion</h2>
+    <p>
+        VunViz demonstrates how automated scanning, CVE enrichment, and reporting can be combined
+        in a simple student project. It emphasizes safe practices, learning, and clear reporting.
+    </p>
+</div>
+
+</body>
+</html>
